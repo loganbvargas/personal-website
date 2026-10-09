@@ -94,3 +94,22 @@ prevButton.addEventListener("click", function() {
 
     projectTrack.style.transform = "translateX(0)";
 });
+
+const emailLink = document.getElementById("email-link");
+const emailFallback = document.getElementById("email-fallback");
+const copyEmailButton = document.getElementById("copy-email");
+
+emailLink.addEventListener("click", () => {
+    setTimeout(() => {
+        emailFallback.hidden = false;
+    }, 1500);
+});
+
+copyEmailButton.addEventListener("click", async () => {
+    try {
+        await navigator.clipboard.writeText("contact@loganbvargas.com");
+        copyEmailButton.textContent = "Copied!";
+    } catch (error) {
+        copyEmailButton.textContent = "Copy failed";
+    }
+});
