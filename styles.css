@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background-color: #0b1120;
+    background-color: #172033;
     color: #f8fafc;
     font-family: Arial, sans-serif;
     margin: 0;
@@ -61,4 +61,204 @@ header p {
 section {
     padding-top: 100px;
     padding-bottom: 100px;
+}
+
+.project-card {
+    flex: 0 0 calc((100% - 40px) / 3);
+    box-sizing: border-box;
+    min-width: 0;
+    background-color: #202b40;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    padding: 30px;
+    cursor: pointer;
+    transition:
+    transform 0.5s ease,
+    flex-basis 0.5s ease,
+    border-color 0.3s ease,
+    opacity 0.4s ease;
+}
+
+footer a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+footer a:visited {
+    color: #38bdf8;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: #38bdf8;
+}
+
+.project-details {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    transition: max-height 0.5s ease,
+                opacity 0.4s ease;
+}
+
+.project-card.expanded .project-details {
+    max-height: 300px;
+    opacity: 1;
+}
+
+.project-details pre {
+    background-color: #111827;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.project-details code {
+    color: #cbd5e1;
+    font-family: monospace;
+    font-size: 0.8rem;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+
+
+.project-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #38bdf8;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+
+.project-tech {
+    color: #38bdf8;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+
+.project-carousel {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.project-track {
+    display: flex;
+    gap: 20px;
+    transition:
+        transform 0.5s ease,
+        gap 0.5s ease;
+    align-items: stretch;
+}
+
+.carousel-button {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #334155;
+    background-color: #202b40;
+    color: #38bdf8;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: opacity 0.4s ease;
+}
+
+.carousel-viewport {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    padding-top: 12px;
+}
+
+.project-card.expanded .action-arrow {
+    transform: rotate(180deg);
+}
+
+.action-arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.action-label {
+    display: grid;
+}
+
+.action-label span {
+    grid-area: 1 / 1;
+    transition: opacity 0.3s ease;
+}
+
+.label-view {
+    opacity: 1;
+}
+
+.label-hide {
+    opacity: 0;
+}
+
+.project-card.expanded .label-view {
+    opacity: 0;
+}
+
+.project-card.expanded .label-hide {
+    opacity: 1;
+}
+
+.project-carousel.has-expanded-card .carousel-button {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.project-card.filling h3 {
+    font-size: 1.8rem;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.project-card.filling > p {
+    color: #cbd5e1;
+    line-height: 1.7;
+    max-width: 700px;
+}
+
+.project-card.filling .project-details {
+    margin-top: 30px;
+    line-height: 1.7;
+}
+
+.project-track.showcase-open {
+    gap: 0;
+    align-items: flex-start;
+}
+
+.project-track.showcase-open .project-card {
+    flex: 0 0 0;
+    min-width: 0;
+    padding: 0;
+    border-width: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.project-track.showcase-open .project-card.filling {
+    flex: 0 0 100%;
+    padding: 40px;
+    border-width: 1px;
+    opacity: 1;
+    overflow: hidden;
+}
+
+.project-card.filling:hover {
+    transform: none;
 }

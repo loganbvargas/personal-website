@@ -25,14 +25,127 @@
     </header>
 
     <main>
-       <section id="about">
+        <section id="about">
             <h2>About Me</h2>
-            <p>I'm a Computer Engineering student interested in software, hardware, and building things that combine both.</p>
+            <p>I'm a Computer Engineering student interested in software, hardware, and building things that combine
+                both.</p>
         </section>
 
         <section id="projects">
             <h2>Projects</h2>
-            <p>Projects coming soon.</p>
+            <div class="project-carousel">
+                <button class="carousel-button prev" type="button">←</button>
+                <div class="carousel-viewport">
+                    <div class="project-track">
+
+                        <div class="project-card">
+                            <div class="project-tech">C++ • GAME DEVELOPMENT</div>
+                            <h3>FNAF-Inspired Game</h3>
+
+                            <p>
+                                A C++ game inspired by Five Nights at Freddy's,
+                                featuring animatronic movement and real-time gameplay.
+                            </p>
+
+                            <div class="project-action">
+                                <span class="action-label">
+                                    <span class="label-view">View details</span>
+                                    <span class="label-hide">Hide details</span>
+                                </span>
+                                <span class="action-arrow">↓</span>
+                            </div>
+
+                            <div class="project-details">
+                                <p>
+                                    Built in C++ to explore game loops, input handling,
+                                    timing, and object-oriented programming.
+                                </p>
+
+                                <pre><code>if (bonnie.shouldMove()) {
+bonnie.moveForward();
+}</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-tech">HTML • CSS • JAVASCRIPT</div>
+                            <h3>Personal Portfolio</h3>
+
+                            <p>
+                                A personal website built from scratch using HTML,
+                                CSS, and JavaScript.
+                            </p>
+
+                            <div class="project-action">
+                                <span class="action-label">
+                                    <span class="label-view">View details</span>
+                                    <span class="label-hide">Hide details</span>
+                                </span>
+                                <span class="action-arrow">↓</span>
+                            </div>
+
+                            <div class="project-details">
+                                <p>
+                                    Built from scratch to showcase my projects while learning
+                                    front-end development, interactive design, and website deployment.
+                                </p>
+
+                                <pre><code>card.addEventListener("click", function() {
+    card.classList.add("expanded", "filling");
+    projectTrack.classList.add("showcase-open");
+});</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-tech">C++ • SOFTWARE DEVELOPMENT</div>
+                            <h3>CS 100 Group Project</h3>
+
+                            <p>
+                                A collaborative software construction project
+                                developed as part of UC Riverside's CS 100 course.
+                            </p>
+
+                            <div class="project-action">
+                                <span class="action-label">
+                                    <span class="label-view">View details</span>
+                                    <span class="label-hide">Hide details</span>
+                                </span>
+                                <span class="action-arrow">↓</span>
+                            </div>
+
+                            <div class="project-details">
+                                <p>
+                                    Currently in development. This project focuses
+                                    on collaborative development, version control,
+                                    and software engineering practices.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-tech">FUTURE PROJECT</div>
+                            <h3>Coming Soon...</h3>
+                            <p>
+                                More projects are on the way as I continue
+                                exploring my career in Computer Engineering.
+                            </p>
+                            <div class="project-action">
+                                <span class="action-label">
+                                    <span class="label-view">View details</span>
+                                    <span class="label-hide">Hide details</span>
+                                </span>
+                                <span class="action-arrow">↓</span>
+                            </div>
+                            <div class="project-details">
+                                <p>
+                                    Stay tuned for future projects and experiments.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-button next" type="button">→</button>
+            </div>
         </section>
 
         <section id="contact">
@@ -45,6 +158,9 @@
     <footer>
         <a href="https://github.com/loganbvargas">GitHub</a>
     </footer>
+
+    <script src="script.js"></script>
+
 </body>
 
 </html>
