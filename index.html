@@ -13,25 +13,101 @@
 <body>
     <header>
         <nav>
-            <a href="#">Logan Vargas</a>
-
-            <div>
+            <a href="#" class="nav-brand">
+                <img src="favicon.png" alt="" class="nav-logo">
+                <span>Logan Vargas</span>
+            </a>
+            <div class="nav-links">
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
+                <a href="resume.html" class="nav-resume">Résumé</a>
             </div>
         </nav>
 
-        <h1>Logan Vargas</h1>
-        <p>Computer Engineering student at UC Riverside.</p>
+        <div class="hero">
+            <p class="hero-eyebrow">COMPUTER ENGINEERING · UC RIVERSIDE</p>
+
+            <h1>
+                Hi, I'm Logan Vargas.
+                <span>
+                    I enjoy building things and bringing ideas to life through code.
+                </span>
+            </h1>
+
+            <p class="hero-description">
+                I'm a Computer Engineering student at UC Riverside who enjoys programming and understanding how software
+                and hardware work together. I'm currently building projects in C++ and web development, with a growing
+                interest in robotics and cybersecurity.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#projects" class="hero-button hero-primary">
+                    Explore Projects
+                </a>
+
+                <a href="#about" class="hero-button hero-secondary">
+                    More About Me
+                </a>
+            </div>
+        </div>
     </header>
 
     <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I'm a Computer Engineering student interested in software, hardware, and building things that combine
-                both.</p>
+
+        <section id="about" class="about-section">
+            <p class="about-eyebrow">GET TO KNOW ME</p>
+            <h2>A little about me.</h2>
+
+            <div class="about-grid">
+                <div class="about-story">
+                    <p>
+                        I was born in Peru and came to Orange County,
+                        California back in 2017. I'm studying Computer Engineering at
+                        UC Riverside because I enjoy programming and
+                        learning how technology works.
+                    </p>
+
+                    <p>
+                        I love turning random ideas into projects, whether that's
+                        developing a game in C++ or building this website
+                        from scratch.
+                    </p>
+
+                    <p>
+                        Outside of coding, I'm a huge soccer fan, especially
+                        FC Barcelona. I also enjoy table tennis and working out. Between school, personal projects,
+                        and my 53 mile commute each way, there's always something keeping
+                        me busy.
+                    </p>
+                </div>
+
+                <div class="about-facts">
+                    <h3>QUICK FACTS</h3>
+
+                    <div class="fact">
+                        <span>BACKGROUND</span>
+                        <p>🇵🇪 Peru → 🍊 Orange County, CA</p>
+                    </div>
+
+                    <div class="fact">
+                        <span>EDUCATION</span>
+                        <p>UC Riverside · Computer Engineering</p>
+                    </div>
+
+                    <div class="fact">
+                        <span>CURRENTLY BUILDING</span>
+                        <p>C++ Projects · Web Development</p>
+                    </div>
+
+                    <div class="fact">
+                        <span>BEYOND THE KEYBOARD</span>
+                        <p>⚽️ Soccer · FC Barcelona</p>
+                    </div>
+                </div>
+            </div>
         </section>
+
 
         <section id="projects">
             <h2>Projects</h2>
