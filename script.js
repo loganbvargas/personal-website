@@ -113,3 +113,30 @@ copyEmailButton.addEventListener("click", async () => {
         copyEmailButton.textContent = "Copy failed";
     }
 });
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", function() {
+    const isOpen = navLinks.classList.toggle("open");
+    document.body.classList.toggle("menu-open", isOpen);
+
+    menuToggle.classList.toggle("active", isOpen);
+
+    menuToggle.setAttribute("aria-expanded", isOpen);
+
+    menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
+});
+
+navLinks.querySelectorAll("a").forEach(function(link) {
+    link.addEventListener("click", function() {
+        navLinks.classList.remove("open");
+        document.body.classList.remove("menu-open");
+        menuToggle.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+    });
+});
