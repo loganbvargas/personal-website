@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Résumé of Logan Vargas, Computer Engineering student at UC Riverside.">
+    <title>Résumé | Logan Vargas</title>
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="nav-brand">
+                <img src="favicon.png" alt="" class="nav-logo">
+                <span>Logan Vargas</span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false"
+                aria-controls="nav-links">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links" id="nav-links">
+                <a href="index.html#about">About</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="resume.html" class="nav-resume">Résumé</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="resume-page">
+        <section class="resume-section">
+            <h1>My Résumé</h1>
+            <p>
+                Computer Engineering student at UC Riverside,
+                passionate about software and hardware development.
+            </p>
+
+
+            <a href="resume.pdf" class="resume-download" download="Logan_Vargas_Resume.pdf">
+                Download PDF ↓
+            </a>
+
+
+            <div class="resume-viewer">
+                <iframe src="resume.pdf#toolbar=0" title="Logan Vargas Résumé">
+                </iframe>
+            </div>
+
+            <p class="resume-fallback">
+                Having trouble viewing the résumé?
+                <a href="resume.pdf" target="_blank" rel="noopener noreferrer">
+                    Open the PDF directly.
+                </a>
+            </p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
